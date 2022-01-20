@@ -42,7 +42,7 @@ actor {
         var all : List.List<Message> = List.nil();
         for(msg in Iter.fromArray(List.toArray(messages))){
             if(msg.time >= since){
-                all := List.push(msg, messages);
+                all := List.push(msg, all);
             };
         };
         List.toArray(all)

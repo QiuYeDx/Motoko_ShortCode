@@ -12,7 +12,7 @@ actor {
     private type MyBlog = actor{
         follow: shared (Principal) -> async ();
         follows: shared query() -> async [Principal];
-        post: shared (Time) -> async ();
+        post: shared (Text) -> async ();
         posts: shared query (Time) -> async [Message];
         timeline: shared (Time) -> async [Message];
     };
